@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Array Demo  </TITLE>
+
+<script>
+function GetPic()
+{
+var index=document.getElementById("txtIndex").value;
+var cars=["Images/Audi.jpg","Images/Ferrari.jpg","Images/Mercedes.jpg","Images/Range Rover.jpg"];
+var carNames=["Audi","Ferrari","Mercedes","Range Rover"];
+
+document.getElementById("pic").src=cars[index];
+document.getElementById("carName").innerHTML=carNames[index];
+}
+</script>
+</HEAD>
+<BODY>
+<div>
+<form>
+<input type="number" min="0" max="3" value="0" id="txtIndex" onChange="GetPic()"> <br>
+Select Array Index <br>
+<img src="Images/Audi.jpg" id="pic" width="600" height="400" border="1" alt="Pic"> <br>
+<div id="carNames"> </div>
+</form>
+</div>
+</BODY>
+</HTML>
